@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-plugin-qr-b64" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>QRBase64Reader</name>
+    <description>Plugin Cordova pour décoder des QR codes à partir d'images base64</description>
+    <license>MIT</license>
+    <author>Ton Nom</author>
+
+    <js-module src="www/qrreader.js" name="QRReader">
+        <clobbers target="QRReader" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="QRReader">
+                <param name="android-package" value="com.example.qrreader.QRReader" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/QRReader.java" target-dir="src/com/example/qrreader" />
+
+        <!-- <framework src="com.google.zxing:core:3.5.3" /> -->
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+
+        <!-- Déclaration de la feature Cordova -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="QRReader">
+                <param name="ios-package" value="QRReader" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <!-- Ajout du fichier Swift -->
+        <source-file src="src/ios/QRReader.swift" />
+
+        <!-- Bridging Header pour Swift -->
+        <header-file src="src/ios/Bridging-Header.h" />
+
+        <!-- Frameworks requis -->
+        <framework src="Foundation.framework" />
+        <framework src="UIKit.framework" />
+
+        <!-- Support Swift -->
+        <preference name="UseSwiftLanguageVersion" value="5.0" />
+
+        <!-- Définir SWIFT_VERSION dans le projet -->
+        <config-file target="project.pbxproj" parent="/*">
+            <build-settings>
+                <SWIFT_VERSION>5.0</SWIFT_VERSION>
+            </build-settings>
+        </config-file>
+
+        <!-- Info.plist config si besoin -->
+        <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+            <string>$(DEVELOPMENT_LANGUAGE)</string>
+        </config-file>
+
+    </platform>
+
+</plugin>

@@ -1,0 +1,37 @@
+{
+    "name": "cordova-plugin-qr-code-reader",
+    "version": "1.0.0",
+    "description": "Plugin Cordova pour décoder un QR code à partir d'une image base64 via ZXing",
+    "cordova": {
+      "id": "cordova-plugin-qr-code-reader",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/toncompte/cordova-plugin-qr-code-reader.git"
+    },
+    "keywords": [
+      "cordova",
+      "qr",
+      "plugin",
+      "base64",
+      "zxing",
+      "android",
+      "cordova-android"
+    ],
+    "author": "Ton Nom <ton.email@example.com>",
+    "license": "MIT",
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=10.0.0"
+      },
+      {
+        "name": "cordova-android",
+        "version": ">=10.0.0"
+      }
+    ]
+  }
+  
