@@ -34,12 +34,12 @@
         <config-file target="config.xml" parent="/*">
             <feature name="QRReader">
                 <param name="ios-package" value="QRReader" />
-                <param name="onload" value="true" />
+                <!-- <param name="onload" value="true" /> -->
             </feature>
         </config-file>
 
-        <source-file src="src/ios/QRReader.swift" />
         <header-file src="src/ios/Bridging-Header.h" />
+        <source-file src="src/ios/QRReader.swift" />
 
         <framework src="Foundation.framework" />
         <framework src="UIKit.framework" />
