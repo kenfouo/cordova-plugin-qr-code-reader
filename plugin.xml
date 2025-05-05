@@ -29,7 +29,7 @@
     <!-- iOS -->
     <platform name="ios">
 
-        <variable name="UseSwiftLanguageVersion" default="5.0" />
+        <!-- <variable name="UseSwiftLanguageVersion" default="5.0" /> -->
 
         <config-file target="config.xml" parent="/*">
             <feature name="QRReader">
@@ -44,13 +44,20 @@
         <framework src="Foundation.framework" />
         <framework src="UIKit.framework" />
 
-        <preference name="UseSwiftLanguageVersion" value="$UseSwiftLanguageVersion" />
+        <config-file target="project.pbxproj" parent="/*">
+            <build-settings>
+                <SWIFT_OBJC_BRIDGING_HEADER>$(PROJECT_DIR)/Plugins/cordova-plugin-qr-b64/Bridging-Header.h</SWIFT_OBJC_BRIDGING_HEADER>
+                <SWIFT_VERSION>$UseSwiftLanguageVersion</SWIFT_VERSION>
+            </build-settings>
+        </config-file>
+
+<!--         <preference name="UseSwiftLanguageVersion" value="$UseSwiftLanguageVersion" />
 
         <config-file target="project.pbxproj" parent="/*">
             <build-settings>
                 <SWIFT_VERSION>$UseSwiftLanguageVersion</SWIFT_VERSION>
             </build-settings>
-        </config-file>
+        </config-file> -->
 
     </platform>
 
