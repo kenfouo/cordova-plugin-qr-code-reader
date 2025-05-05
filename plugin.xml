@@ -51,11 +51,11 @@
         <preference name="UseSwiftLanguageVersion" value="5.0" />
 
         <!-- Définir SWIFT_VERSION dans le projet -->
-        <config-file target="project.pbxproj" parent="/*">
+        <!-- <config-file target="project.pbxproj" parent="/*">
             <build-settings>
                 <SWIFT_VERSION>5.0</SWIFT_VERSION>
             </build-settings>
-        </config-file>
+        </config-file> -->
 
         <!-- Info.plist config si besoin -->
         <!-- <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
