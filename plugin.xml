@@ -29,12 +29,27 @@
     <!-- iOS -->
     <platform name="ios">
 
-        <!-- <variable name="UseSwiftLanguageVersion" default="5.0" /> -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="QRReader">
+                <param name="ios-package" value="QRReader" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/QRReader.h" />
+        <source-file src="src/ios/QRReader.m" />
+
+        <framework src="CoreImage.framework" />
+        <framework src="UIKit.framework" />
+    </platform>
+
+<!--     <platform name="ios">
+
+        <variable name="UseSwiftLanguageVersion" default="5.0" />
 
         <config-file target="config.xml" parent="/*">
             <feature name="QRReader">
                 <param name="ios-package" value="QRReader" />
-                <!-- <param name="onload" value="true" /> -->
+                <param name="onload" value="true" />
             </feature>
         </config-file>
 
@@ -51,15 +66,15 @@
             </build-settings>
         </config-file>
 
-<!--         <preference name="UseSwiftLanguageVersion" value="$UseSwiftLanguageVersion" />
+        <preference name="UseSwiftLanguageVersion" value="$UseSwiftLanguageVersion" />
 
         <config-file target="project.pbxproj" parent="/*">
             <build-settings>
                 <SWIFT_VERSION>$UseSwiftLanguageVersion</SWIFT_VERSION>
             </build-settings>
-        </config-file> -->
+        </config-file> 
 
-    </platform>
+    </platform> -->
 
 
 </plugin>
