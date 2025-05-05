@@ -58,9 +58,9 @@
         </config-file>
 
         <!-- Info.plist config si besoin -->
-        <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+        <!-- <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
             <string>$(DEVELOPMENT_LANGUAGE)</string>
-        </config-file>
+        </config-file> -->
 
     </platform>
 
