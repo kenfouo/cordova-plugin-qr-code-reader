@@ -46,7 +46,7 @@
 
         <config-file target="project.pbxproj" parent="/*">
             <build-settings>
-                <SWIFT_OBJC_BRIDGING_HEADER>$(PROJECT_DIR)/Plugins/cordova-plugin-qr-b64/Bridging-Header.h</SWIFT_OBJC_BRIDGING_HEADER>
+                <SWIFT_OBJC_BRIDGING_HEADER>$(PROJECT_DIR)/Plugins/cordova-plugin-qr-code-reader/Bridging-Header.h</SWIFT_OBJC_BRIDGING_HEADER>
                 <SWIFT_VERSION>$UseSwiftLanguageVersion</SWIFT_VERSION>
             </build-settings>
         </config-file>
