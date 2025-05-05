@@ -29,7 +29,8 @@
     <!-- iOS -->
     <platform name="ios">
 
-        <!-- Déclaration de la feature Cordova -->
+        <variable name="UseSwiftLanguageVersion" default="5.0" />
+
         <config-file target="config.xml" parent="/*">
             <feature name="QRReader">
                 <param name="ios-package" value="QRReader" />
@@ -37,31 +38,21 @@
             </feature>
         </config-file>
 
-        <!-- Ajout du fichier Swift -->
         <source-file src="src/ios/QRReader.swift" />
-
-        <!-- Bridging Header pour Swift -->
         <header-file src="src/ios/Bridging-Header.h" />
 
-        <!-- Frameworks requis -->
         <framework src="Foundation.framework" />
         <framework src="UIKit.framework" />
 
-        <!-- Support Swift -->
-        <preference name="UseSwiftLanguageVersion" value="5.0" />
+        <preference name="UseSwiftLanguageVersion" value="$UseSwiftLanguageVersion" />
 
-        <!-- Définir SWIFT_VERSION dans le projet -->
-        <!-- <config-file target="project.pbxproj" parent="/*">
+        <config-file target="project.pbxproj" parent="/*">
             <build-settings>
-                <SWIFT_VERSION>5.0</SWIFT_VERSION>
+                <SWIFT_VERSION>$UseSwiftLanguageVersion</SWIFT_VERSION>
             </build-settings>
-        </config-file> -->
-
-        <!-- Info.plist config si besoin -->
-        <!-- <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
-            <string>$(DEVELOPMENT_LANGUAGE)</string>
-        </config-file> -->
+        </config-file>
 
     </platform>
+
 
 </plugin>
