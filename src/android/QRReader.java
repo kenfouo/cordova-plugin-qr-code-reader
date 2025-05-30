@@ -60,7 +60,7 @@ public class QRReader extends CordovaPlugin {
             Result result = null;
             try {
                 result = reader.decode(binaryBitmap, hints); // Pass hints to the decode method
-            } catch (NotFoundException | FormatException e) {
+            } catch (NotFoundException e) {
                 // Try again without specifying format if the first attempt failed,
                 // in case it's a different barcode type or an issue with the hint.
                 // This makes it more robust, but might be slightly slower.
