@@ -22,6 +22,7 @@
         </config-file>
 
         <source-file src="src/android/QRReader.java" target-dir="src/com/example/qrreader" />
+        <source-file src="src/android/MSIReader.java" target-dir="src/com/example/qrreader" />
 
         <!-- <framework src="com.google.zxing:core:3.5.3" /> -->
     </platform>
